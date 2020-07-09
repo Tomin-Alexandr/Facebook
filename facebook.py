@@ -64,13 +64,13 @@ share_count	    int         # Post share count
 """
 MySQL Database. comments table:
 ----------------------------
-id	                int      # Comment id
-post_link	        text     # Link to parrent post
-author_profile_link	text     # Link to comment author page
-author_name	        text     # Name of comment author 
-text	            text     # Comment text
-time	            datetime # Comment date published   
-emoji_count	        int      # Comment emoji count
+id	                int         # Comment id
+post_link	        text        # Link to parrent post
+author_profile_link	text        # Link to comment author page
+author_name	        text        # Name of comment author 
+text	            text        # Comment text
+time	            datetime    # Comment date published   
+emoji_count	        int         # Comment emoji count
 ---------------------------
 """
 SQLRequests = {
@@ -298,10 +298,10 @@ def split_list(alist, wanted_parts=1):
 """
 MySQL Database. blogs table:
 ----------------------------
-url	                text # Link of channel or group page
-name	            text # Name of channel or group
-subsribers	        int  # Subscriber count
-name_in_facebook	text # Full channel or group name
+url	                text    # Link of channel or group page
+name	            text    # Name of channel or group
+subsribers	        int     # Subscriber count
+name_in_facebook	text    # Full channel or group name
 ---------------------------
 """
 DB_Option = {'user': 'user', 'password': 'pass', 'database': 'facebook', 'ip': 'localhost'}
@@ -312,10 +312,9 @@ links = DB_Cursor.fetchall()
 
 # Run thread's
 threads = []
-# S
-ThreadCount = 6
+
+ThreadCount = 6 # 6 Thread's
 for i in split_list(links,ThreadCount):
-    print(i)
     t = threading.Thread(target=runWorker, args=(i,))
     threads.append(t)
     t.start()
