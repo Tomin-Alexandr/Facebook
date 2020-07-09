@@ -30,7 +30,7 @@ options.add_argument("--user-agent=%s" % UserAgent().random)
 prefs = {"profile.managed_default_content_settings.images": 2}
 options.add_experimental_option("prefs", prefs)
 
-#All xpath for parse
+# All xpath for russian language
 XPATH = {
     'GetPostLink_FromGroup'     : "//div[contains(@aria-label, 'Лента новостей')]//a[contains(text(),'Комментарии:')]",
     'GetPostLink_FromChannel'   : "//div[contains(@class, 'userContentWrapper')]//a[contains(text(),'Комментарии:')]",
@@ -51,26 +51,26 @@ XPATH = {
 """
 MySQL Database. posts table:
 ----------------------------
-url	            text        # Post url
-author	        text        # Post starter name
-content	        text        # Text content from post
-date_published	datetime    # Post Date published 
-emoji_count	    int         # Post emoji count
-comments_count	int         # Post comments count
-share_count	    int         # Post share count
+url             text        # Post url
+author          text        # Post starter name
+content         text        # Text content from post
+date_published  datetime    # Post Date published 
+emoji_count     int         # Post emoji count
+comments_count  int         # Post comments count
+share_count     int         # Post share count
 
 ---------------------------
 """
 """
 MySQL Database. comments table:
 ----------------------------
-id	                int         # Comment id
-post_link	        text        # Link to parrent post
-author_profile_link	text        # Link to comment author page
-author_name	        text        # Name of comment author 
-text	            text        # Comment text
-time	            datetime    # Comment date published   
-emoji_count	        int         # Comment emoji count
+id                  int         # Comment id
+post_link           text        # Link to parrent post
+author_profile_link text        # Link to comment author page
+author_name         text        # Name of comment author 
+text                text        # Comment text
+time                datetime    # Comment date published   
+emoji_count         int         # Comment emoji count
 ---------------------------
 """
 SQLRequests = {
