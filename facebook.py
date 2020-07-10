@@ -38,7 +38,7 @@ XPATH = {
     'GetCommentsButton_FromPost': "//div[contains(@class, 'userContentWrapper')]//a[contains(text(), 'Комментарии')]",
     'GetEmojiCount_FromPost'    : "//div[contains(@class, 'userContentWrapper')]//a[contains(@data-testid, 'UFI2ReactionsCount/root')]/span[1]",
     'GetShareCount_FromPost'    : "//div[contains(@class, 'userContentWrapper')]//a[contains(@ajaxify, '/ajax/shares/view')]",
-    'GetDatePublished_FromPost' : "//span[contains(@class, 'timestampContent')]",
+    'GetDatePublished_FromPost' : "//div[contains(@class, 'userContentWrapper')]//span[contains(@class, 'timestampContent')]",
     'old_to_newCommentsButton'  : "//a[contains(text(),'От старых к новым')]",
     'MostActualCommentsButton'  : "//a[contains(text(),'Самые актуальные')]",
     'ChooseDisplayAllComments'  : "//div[contains(text(),'Показывать все комментарии, включая потенциальный спам.')]/parent::*/parent::*/parent::*/parent::*",
